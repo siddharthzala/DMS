@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+
+    <title>User_Tester</title>
+    <style>
+          button
+          {
+                margin-left:40px;
+          }
+          .btn:hover
+          {
+                background-color:#08809e;
+          }
+
+    </style>
+</head>
+<body class="p-3 mb-2 bg-dark text-white">
+<div style="width:88%;margin:auto;margin-top:40px;border:2px solid gray;border-radius:20px;background-color:white;" class="p-3 mb-2 bg-dark text-white">
+    <div style="text-align:center;margin-top:40px;margin-bottom:20px;">
+        <div>
+            <a href="{{url_for('createdefect')}}">
+                <button class="btn btn-primary btn-lg" id="ticket_tester" name="ticket_tester" type="submit">Create
+                    Ticket
+                </button>
+            </a>
+            <a href="{{url_for('alldefect')}}">
+            <button class="btn btn-primary btn-lg" id="tester_defect" name="tester_defect"
+                    type="submit">All Defects
+            </button>
+            </a>
+            <br>
+        </div>
+    </div>
+</div>
+    <div style="width:22%;margin:auto;margin-top:40px;background-color:white;" class="p-3 mb-2 bg-dark text-white">
+        <div style="text-align:center;margin-top:40px;margin-bottom:20px;">
+            <div>
+            <a href="{{url_for('logout')}}">
+                <button class="btn btn-primary btn-lg" id="Logout" name="Logout" type="submit">Logout
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+            (function(d, m){
+            var kommunicateSettings =
+            {"appId":"3e734511eea47911c6ca9bb908d251ef2","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+            /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+
+</script>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

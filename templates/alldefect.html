@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+     <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><title>All Defects</title>
+</head>
+<body>
+<h1 class="text-center">All The defects</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='UserID')}}">User ID</a></td>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='User_Role')}}">User Role</a></td>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='DefectID')}}">Defect ID</a></td>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='Defect_title')}}">Defect Title</a></td>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='Defect_descrption')}}">Defect Description</a></td>
+        <td scope="col"><a class="text-uppercase" href="{{url_for('alldefect',sort='date')}}">Date</a></td>
+        <td scope="col">Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    {%for defect in defects%}
+    <tr>
+        <td>{{ defect["UserID"] }}</td>
+        <td>{{ defect["User_Role"] }}</td>
+        <td>{{ defect["DefectID"] }}</td>
+        <td>{{ defect["Defect_title"] }}</td>
+        <td>{{ defect["Defect_description"] }}</td>
+        <td>{{ defect["Date"] }}</td>
+        <td><a class="vaild" title="Valid"></a>
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" id="valid" name="valid" aria-expanded="false" aria-controls="collapseExample"
+                    type="button">Valid</button>
+            <a class="invaild" title="Invalid"></a>
+            <button class="btn btn-primary btn-lg" id="invalid" name="invalid"
+                    type="submit">Invalid</button></td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+<script>
+      function goto(name) {
+        window.location.replace(`http://localhost:5000/alldefect?sort=${name}`);
+      }
+
+</script>
+</body>
+</html>
